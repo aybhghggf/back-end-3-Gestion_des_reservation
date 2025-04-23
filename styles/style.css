@@ -1,0 +1,826 @@
+/* style.css - Main stylesheet for GymFit website */
+
+/* Global Styles */
+:root {
+    --primary: #ff4500;
+    --secondary: #333333;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e53e00;
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #262626;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  /* Header & Navigation */
+  .header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  
+  .logo span {
+    color: var(--primary);
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+  }
+  
+  .nav-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary);
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    margin-bottom: 4rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+  }
+  
+  /* Features */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+  
+  .feature-item {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Services */
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .service-card {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .service-content {
+    padding: 1.5rem;
+  }
+  
+  .service-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Pricing Plans */
+  .pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+  
+  .plan-card {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plan-card.featured {
+    position: relative;
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+  }
+  
+  .featured-tag {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.5rem 0;
+  }
+  
+  .plan-price span {
+    font-size: 1rem;
+    color: var(--secondary);
+  }
+  
+  .plan-features {
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+  
+  .plan-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    background-color: var(--light);
+  }
+  
+  .testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+  }
+  
+  /* Contact */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .contact-info {
+    flex: 0 0 calc(40% - 30px);
+    margin: 0 15px;
+  }
+  
+  .contact-form {
+    flex: 0 0 calc(60% - 30px);
+    margin: 0 15px;
+  }
+  
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-right: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .map-container {
+    height: 400px;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--secondary);
+    color: white;
+    padding: 4rem 0 2rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+  
+  .footer-col {
+    flex: 0 0 calc(25% - 30px);
+    margin: 0 15px 30px;
+  }
+  
+  .footer h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary);
+  }
+  
+  .bottom-footer {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .social-links {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links li {
+    margin-right: 1rem;
+  }
+  
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background-color: var(--primary);
+  }
+  
+  /* Client Area Styles */
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: var(--secondary);
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    height: calc(100vh - 70px);
+  }
+  
+  .user-profile {
+    text-align: center;
+    padding: 0 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-role {
+    color: #aaa;
+    font-size: 0.875rem;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 2rem 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sidebar-menu li.active {
+    background-color: var(--primary);
+  }
+  
+  .sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-menu i {
+    margin-right: 0.75rem;
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-title {
+    margin-bottom: 0;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .stat-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .stat-card {
+    flex: 0 0 calc(25% - 30px);
+    margin: 0 15px 30px;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    color: #777;
+  }
+  
+  .upcoming-classes {
+    margin-top: 2rem;
+  }
+  
+  .class-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .class-time {
+    flex: 0 0 120px;
+    font-weight: 600;
+  }
+  
+  .class-info {
+    flex: 1;
+  }
+  
+  .class-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .class-instructor {
+    color: #777;
+    font-size: 0.875rem;
+  }
+  
+  .class-actions {
+    flex: 0 0 100px;
+    text-align: right;
+  }
+  
+  .booking-form {
+    max-width: 800px;
+  }
+  
+  .booking-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .booking-option {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .booking-option:hover {
+    transform: translateY(-5px);
+  }
+  
+  .booking-option.selected {
+    border: 2px solid var(--primary);
+  }
+  
+  .booking-option img {
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Table styles */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  th {
+    background-color: var(--light);
+    font-weight: 600;
+  }
+  
+  .status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .status-confirmed {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+  }
+  
+  .status-pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning);
+  }
+  
+  .status-cancelled {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .feature-item, .service-card, .plan-card, .stat-card {
+      flex: 0 0 calc(50% - 30px);
+    }
+    
+    .sidebar {
+      width: 70px;
+      overflow: hidden;
+    }
+    
+    .sidebar-menu span {
+      display: none;
+    }
+    
+    .sidebar-menu i {
+      margin-right: 0;
+      font-size: 1.2rem;
+    }
+    
+    .user-profile {
+      padding: 1rem 0;
+    }
+    
+    .user-name, .user-role {
+      display: none;
+    }
+    
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .main-content {
+      margin-left: 70px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      background-color: white;
+      width: 100%;
+      height: calc(100vh - 70px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+    }
+    
+    .nav-menu.active {
+      left: 0;
+    }
+    
+    .nav-item {
+      margin: 1.5rem 0;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+    
+    .feature-item, .service-card, .plan-card, .footer-col, .contact-info, .contact-form, .stat-card, .booking-option {
+      flex: 0 0 calc(100% - 30px);
+    }
+    
+    .dashboard-container {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 1rem 0;
+    }
+    
+    .sidebar-menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+    }
+    
+    .sidebar-menu li {
+      padding: 0.5rem;
+    }
+    
+    .user-profile {
+      display: none;
+    }
+    
+    .main-content {
+      margin-left: 0;
+    }
+  }
