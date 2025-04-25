@@ -1,3 +1,21 @@
+<?php 
+require_once 'includes/functions.php';
+if(isset($_POST['Nom'])
+&& isset($_POST['email'])
+&& isset($_POST['phone'])
+&& isset($_POST['password'])){
+  $fullnom = trim($_POST['Nom']);
+  $email = trim($_POST['email']);
+  $phone = trim($_POST['phone']);
+  $password = trim($_POST['password']);
+  $hashedpassword= password_hash($password,PASSWORD_DEFAULT);
+  createUser($fullnom,$email,$phone,$hashedpassword);
+  header('location:login.php?msg=1');
+  exit;
+}
+
+?>
+
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -23,7 +41,7 @@
    <h2 class="font-semibold text-black text-lg mb-6 select-none">
     Create Account
    </h2>
-   <form class="w-full space-y-4">
+   <form class="w-full space-y-4" method="post" action="sign_in.php">
     <div>
      <label class="sr-only" for="fullname">
       Full name

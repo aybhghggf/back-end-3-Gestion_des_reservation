@@ -1,6 +1,6 @@
 -- Création de la base
-CREATE DATABASE IF NOT EXISTS Réservation_des_Cours;
-USE Réservation_des_Cours;
+CREATE DATABASE IF NOT EXISTS Cours;
+USE Cours;
 
 -- Table des utilisateurs
 CREATE TABLE users (

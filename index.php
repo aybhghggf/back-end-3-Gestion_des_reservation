@@ -43,7 +43,7 @@
                         Get Started
                     </a>
                     <a class="border border-indigo-900 text-indigo-900 px-5 py-3 rounded-md text-sm font-medium hover:bg-indigo-50"
-                        href="#">
+                        href="cours.php">
                         Explore Courses
                     </a>
                 </div>

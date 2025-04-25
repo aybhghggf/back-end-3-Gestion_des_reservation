@@ -1,3 +1,15 @@
+<?php 
+require_once 'includes/functions.php';
+conMsg();
+if(isset($_POST['email'])&& isset($_POST['password'])){
+  $email= trim($_POST['email']);
+  $password=trim($_POST['password']);
+  connectUser($email,$password);
+}else{
+    echo '<script>alert("veuillez remplir tous les champs!")</script>';
+}
+
+?>
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -23,7 +35,7 @@
    <h2 class="font-semibold text-black text-lg mb-6 select-none">
     Welcome Back
    </h2>
-   <form class="w-full space-y-4">
+   <form class="w-full space-y-4" method="post" action="login.php">
     <div>
      <label class="sr-only" for="email">
       Email or username
@@ -31,7 +43,7 @@
      <div class="flex items-center bg-[#f1f5f9] border border-[#e2e8f0] rounded-md px-3 py-2 text-[#94a3b8] text-sm">
       <i class="fas fa-user mr-2">
       </i>
-      <input class="bg-transparent outline-none w-full placeholder:text-[#94a3b8]" id="email" placeholder="Email or username" type="text"/>
+      <input class="bg-transparent outline-none w-full placeholder:text-[#94a3b8]" name="email" id="email" placeholder="Email or username" type="text"/>
      </div>
     </div>
     <div>
@@ -41,13 +53,12 @@
      <div class="flex items-center bg-[#f1f5f9] border border-[#e2e8f0] rounded-md px-3 py-2 text-[#94a3b8] text-sm">
       <i class="fas fa-lock mr-2">
       </i>
-      <input class="bg-transparent outline-none w-full placeholder:text-[#94a3b8]" id="password" placeholder="Password" type="password"/>
+      <input class="bg-transparent outline-none w-full placeholder:text-[#94a3b8]" name="password" id="password" placeholder="Password" type="password"/>
       <i class="far fa-eye text-[#94a3b8] cursor-pointer">
       </i>
      </div>
     </div>
 
-    
     <button class="w-full bg-[#4c51bf] text-white font-semibold rounded-md py-3 mt-1" type="submit">
      Login
     </button>
@@ -61,4 +72,5 @@
    </p>
   </main>
  </body>
+ <script src="scripts/script.js"></script>
 </html>

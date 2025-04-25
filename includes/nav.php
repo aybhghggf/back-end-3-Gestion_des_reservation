@@ -10,7 +10,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="hover:text-indigo-900" href="courses.php">
+                    <a class="hover:text-indigo-900" href="cours.php">
                         Courses
                     </a>
                 </li>
