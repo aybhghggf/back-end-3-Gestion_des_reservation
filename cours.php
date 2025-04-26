@@ -11,11 +11,11 @@ $cours = getProduct();
     <title>Cours</title>
 </head>
 
-<body>
-    <?php include_once 'includes/nav.php' ?>
+<body class="max-w-7xl mx-auto px-6">
+    <?php include_once 'includes/nav.php'; ?>
 
 
-    <section>
+    <section >
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php foreach ($cours as $cour) : ?>
                 <!-- Card 1 -->
@@ -43,7 +43,7 @@ $cours = getProduct();
             <?php endforeach ?>
         </div>
     </section>
-
+    <?php include_once 'includes/float.php'; ?>
 <?php include_once 'includes/footer.php' ?>
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

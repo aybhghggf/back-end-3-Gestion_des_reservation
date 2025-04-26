@@ -22,7 +22,7 @@
         class="text-2xl font-extrabold italic text-[#4f46e5]"
         style="font-family: cursive"
       >
-        logo
+        Ecourse
       </h1>
       <p class="text-sm text-[#475569] leading-relaxed">
         Providing high-quality education and professional development
@@ -59,11 +59,10 @@
     <div>
       <h2 class="font-semibold text-sm mb-4">Quick Links</h2>
       <ul class="space-y-2 text-sm text-[#475569]">
-        <li><a href="#" class="hover:text-[#4f46e5]">Home</a></li>
-        <li><a href="#" class="hover:text-[#4f46e5]">About Us</a></li>
-        <li><a href="#" class="hover:text-[#4f46e5]">Courses</a></li>
-        <li><a href="#" class="hover:text-[#4f46e5]">Instructors</a></li>
-        <li><a href="#" class="hover:text-[#4f46e5]">Contact</a></li>
+        <li><a href="index.php" class="hover:text-[#4f46e5]">Home</a></li>
+        <li><a href="About.php" class="hover:text-[#4f46e5]">About Us</a></li>
+        <li><a href="cours.php" class="hover:text-[#4f46e5]">Courses</a></li>
+        <li><a href="Contact.php" class="hover:text-[#4f46e5]">Contact</a></li>
       </ul>
     </div>
 
@@ -83,15 +82,15 @@
       <ul class="space-y-3 text-sm text-[#475569]">
         <li class="flex items-start space-x-2">
           <i class="fas fa-map-marker-alt text-[#4f46e5] mt-1 text-xs"></i>
-          <span>123 Education Street, Learning City, ED 54321</span>
+          <span>Morroco</span>
         </li>
         <li class="flex items-center space-x-2">
           <i class="fas fa-phone-alt text-[#4f46e5] text-xs"></i>
-          <span>+1 (555) 123-4567</span>
+          <span>+212----------</span>
         </li>
         <li class="flex items-center space-x-2">
           <i class="fas fa-envelope text-[#4f46e5] text-xs"></i>
-          <span>info@educationplatform.com</span>
+          <span>ayoubehamadi5@gmail.com</span>
         </li>
       </ul>
       <form class="mt-6">

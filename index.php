@@ -225,7 +225,9 @@ $cours= getProduct();
 
 
    <footer>
-    <?php include_once 'includes/footer.php' ?>
+    <?php
+    include_once 'includes/float.php' ;
+    include_once 'includes/footer.php' ?>
    </footer> 
 </body>
 

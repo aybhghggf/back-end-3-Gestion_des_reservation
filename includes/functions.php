@@ -59,4 +59,11 @@ function getProduct(){
     $cours= $st->fetchAll();
     return $cours;
 }
+function getProductById($id){
+    global $pdo;
+    $st= $pdo->prepare('SELECT * FROM cours WHERE id=?');
+    $st->execute([$id]);
+    $cours= $st->fetch();
+    return $cours;
+}
 ?>
