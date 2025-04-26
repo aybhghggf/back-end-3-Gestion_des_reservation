@@ -15,6 +15,7 @@ CREATE TABLE users (
 -- Table des cours
 CREATE TABLE cours (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    _image VARCHAR,
     titre VARCHAR(250) NOT NULL,
     _description TEXT,
     _type VARCHAR(100),
@@ -57,3 +58,17 @@ CREATE TABLE notifications (
 
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
+
+INSERT INTO cours (_image, titre, _description, _type, prix, _date, heure)
+VALUES
+('01.jpeg', 'Web Development Masterclass', 'Learn modern web development with HTML, CSS, JavaScript, and more.', 'Programming', 150, '2025-04-01', '10:00:00'),
+('02.jpeg', 'Business Management Essentials', 'Master the fundamentals of business management and leadership.', 'Business', 200, '2025-04-02', '14:00:00'),
+('03.jpeg', 'Graphic Design for Beginners', 'A comprehensive introduction to graphic design and visual communication.', 'Design', 100, '2025-04-03', '09:00:00'),
+('04.jpeg', 'Photography Basics', 'Learn the art of photography and how to capture stunning photos.', 'Photography', 120, '2025-04-04', '15:00:00'),
+('05.jpeg', 'Spanish Language Course', 'Learn Spanish from the ground up with practical lessons and exercises.', 'Languages', 80, '2025-04-05', '11:00:00'),
+('06.jpeg', 'Digital Marketing Strategies', 'Get an in-depth understanding of digital marketing and how to apply it.', 'Business', 180, '2025-04-06', '13:00:00'),
+('07.jpeg', 'UI/UX Design Mastery', 'Dive deep into the world of UI/UX design and create beautiful user interfaces.', 'Design', 140, '2025-04-07', '16:00:00'),
+('08.jpeg', 'Mobile Photography Tips', 'Learn how to take professional-quality photos with your smartphone.', 'Photography', 110, '2025-04-08', '08:00:00'),
+('09.jpeg', 'JavaScript for Beginners', 'A beginner-friendly course for learning JavaScript programming.', 'Programming', 160, '2025-04-09', '10:30:00'),
+('10.jpeg', 'Health & Wellness Coaching', 'Get the skills to become a health and wellness coach and help others.', 'Health', 190, '2025-04-10', '17:00:00');
+

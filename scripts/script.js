@@ -6,4 +6,6 @@ setTimeout(() => {
   document.getElementById('close-btn').onclick = function() {
     document.getElementById('alert').style.display = 'none';
   };
-
+function scr(){
+  
+}

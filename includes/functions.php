@@ -52,5 +52,11 @@ function connectUser($email = null, $password = null) {
         }
     }
 }
-
+function getProduct(){
+    global $pdo;
+    $st= $pdo->prepare('SELECT * FROM cours');
+    $st->execute();
+    $cours= $st->fetchAll();
+    return $cours;
+}
 ?>

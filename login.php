@@ -6,7 +6,6 @@ if(isset($_POST['email'])&& isset($_POST['password'])){
   $password=trim($_POST['password']);
   connectUser($email,$password);
 }else{
-    echo '<script>alert("veuillez remplir tous les champs!")</script>';
 }
 
 ?>
@@ -30,7 +29,7 @@ if(isset($_POST['email'])&& isset($_POST['password'])){
  <body class="bg-[#f8fafc] min-h-screen flex items-center justify-center p-4">
   <main class="bg-white rounded-xl p-8 w-full max-w-sm drop-shadow-md flex flex-col items-center">
    <h1 class="font-pacifico text-[24px] text-[#4c51bf] mb-4 select-none">
-    logo
+    Ecourse
    </h1>
    <h2 class="font-semibold text-black text-lg mb-6 select-none">
     Welcome Back
