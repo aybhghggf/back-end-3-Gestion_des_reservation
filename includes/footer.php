@@ -109,9 +109,6 @@
   >
     <p>© 2025 Education Platform. All rights reserved.</p>
     <div class="flex space-x-6 mt-4 sm:mt-0">
-      <a href="#" class="hover:text-[#4f46e5]">Privacy Policy</a>
-      <a href="#" class="hover:text-[#4f46e5]">Terms of Service</a>
-      <a href="#" class="hover:text-[#4f46e5]">Cookie Policy</a>
     </div>
   </div>
 </footer>

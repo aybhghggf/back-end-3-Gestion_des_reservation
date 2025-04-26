@@ -9,3 +9,11 @@ setTimeout(() => {
 function scr(){
   
 }
+function openModal(idCours) {
+  document.getElementById('reservationModal').classList.remove('hidden');
+  document.getElementById('idCoursInput').value = idCours; // Inject id cours f hidden input
+}
+
+function closeModal() {
+  document.getElementById('reservationModal').classList.add('hidden');
+}

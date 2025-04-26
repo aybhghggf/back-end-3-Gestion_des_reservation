@@ -1,5 +1,11 @@
 <?php 
 require_once 'includes/functions.php';
+getSession();
+
+if(isset($_SESSION['user'])){
+  header('location:index.php?msg=2');
+  exit;
+}
 if(isset($_POST['Nom'])
 && isset($_POST['email'])
 && isset($_POST['phone'])

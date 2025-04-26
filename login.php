@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if(isset($_GET['msg'])&& $_GET['msg']=='plslogin'){
+  echo '<script>alert("Please login to reserve a course")</script>';
+}
 require_once 'includes/functions.php';
 conMsg();
 if(isset($_POST['email'])&& isset($_POST['password'])){
